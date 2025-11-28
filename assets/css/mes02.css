@@ -303,39 +303,58 @@ body {
 }
 
 /* =====================================================
-   CORREÇÃO DO CARROSSEL NO CELULAR (MAIOR & CONFORTÁVEL)
+   CARROSSEL NO MOBILE — SETAS AO LADO DO CARROSSEL
    ===================================================== */
 @media (max-width: 480px) {
 
-  /* aumenta o carrossel */
+  /* aumenta largura do carrossel */
   .carousel {
-    width: 95% !important;
-    max-width: 95%;
+    width: 92% !important;
+    max-width: 92%;
     border-radius: 16px;
-    margin-top: 38px;
+    margin: 40px auto 0 auto;
+    position: relative;
   }
 
+  /* imagens confortáveis */
   .slides .slide {
     max-height: 380px !important;
   }
 
-  /* BOTÕES DO CARROSSEL — AGORA FORA DO CONTAINER */
+  /* ==========================
+       SETAS DO CARROSSEL
+     ========================== */
   .nav {
-    position: fixed !important;      /* fica fixo na tela */
+    position: absolute !important;
     top: 50%;
     transform: translateY(-50%);
-    padding: 10px 12px;
-    z-index: 2000 !important;        /* garante que fique por cima */
+    padding: 6px 8px;
+    font-size: 1.5rem;
+    border-radius: 50%;
     background: rgba(255,255,255,0.45);
-    backdrop-filter: blur(5px);
-    font-size: 1.9rem;
+    backdrop-filter: blur(4px);
+    z-index: 50;
+    transition: 0.25s ease;
   }
 
+  /* esquerda — ao lado do container */
   .nav.left {
-    left: 8px !important;            /* afastado da imagem */
+    left: -22px !important;
   }
 
+  /* direita — ao lado do container */
   .nav.right {
-    right: 8px !important;           /* afastado da imagem */
+    right: -22px !important;
+  }
+
+  /* hover menor no mobile */
+  .nav:hover {
+    transform: translateY(-50%) scale(1.08);
+  }
+
+  /* dar espaço extra ao texto */
+  .mensagem {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
