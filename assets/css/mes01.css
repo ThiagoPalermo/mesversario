@@ -192,3 +192,35 @@ h1 {
     font-size: 2.2rem;
   }
 }
+
+/* ============================================
+   AJUSTE DAS SETAS NO CELULAR (RESPONSIVO)
+   ============================================ */
+@media (max-width: 480px) {
+
+  /* Diminui as setas */
+  .arrow-nav {
+    transform: scale(0.75);
+    opacity: 0.9;
+  }
+
+  /* Move um pouco para fora do texto */
+  .arrow-nav.left {
+    left: -5px;
+  }
+
+  .arrow-nav.right {
+    right: -5px;
+  }
+
+  /* Dá respiro para o texto não colar nas setas */
+  .mensagem {
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+
+  /* Setas do carrossel de imagens também menores */
+  .nav {
+    transform: scale(0.75);
+  }
+}

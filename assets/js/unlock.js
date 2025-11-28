@@ -21,7 +21,7 @@ function checkMonthAccess(monthNumber) {
 
   if (today < release) {
     // redireciona e salva mensagem para a página principal exibir
-    localStorage.setItem("blockedMessage", "Calma amor… esse mês ainda não chegou 💙🔥");
+    localStorage.setItem("blockedMessage", "Ainda não é o momento! Espere até o nosso mêsversário 🥰");
     window.location.href = "index.html";
     return false;
   }
