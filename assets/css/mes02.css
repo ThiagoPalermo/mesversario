@@ -333,3 +333,35 @@ body {
     transform: scale(0.75);
   }
 }
+
+/* =====================================================
+   CORREÇÃO DO CARROSSEL NO CELULAR (MAIOR & CONFORTÁVEL)
+   ===================================================== */
+@media (max-width: 480px) {
+
+  /* aumenta a largura do carrossel */
+  .carousel {
+    width: 90% !important;
+    max-width: 95%;
+    border-radius: 16px;
+  }
+
+  /* imagens mais altas e ocupando mais espaço */
+  .slides .slide {
+    max-height: 380px !important;
+  }
+
+  /* setas menores e mais afastadas */
+  .nav {
+    transform: scale(0.75);
+    padding: 8px; 
+  }
+
+  .nav.left {
+    left: 4px;
+  }
+
+  .nav.right {
+    right: 4px;
+  }
+}

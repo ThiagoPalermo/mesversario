@@ -18,7 +18,7 @@ Acho que podemos dizer o mesmo de nós dois… porque juntos formamos o amor mai
 Você é água, e eu sou fogo... elementos diferentes, mas que se completam de um jeito único.
 E eu quero viver e explorar o mundo inteiro com você.
 
-Quero estar contigo pra todo o sempre, Filipinho. 💙🔥
+Quero estar contigo pra todo o sempre, Filipinho. 💧🔥
 
 O primeiro tema retrata o preto e verde.
 O preto era minha vida amorosa antes de você e de repente apareceu um verdinho na minha vida.
