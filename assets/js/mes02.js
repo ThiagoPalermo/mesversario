@@ -98,6 +98,76 @@ Agora somos Gota e Faísca... o que será que nos aguarda mês quem vem?
     slidesWrapper.addEventListener("mouseenter", stopAuto);
     slidesWrapper.addEventListener("mouseleave", startAuto);
 
+      /* =====================================
+       SUPORTE A SWIPE (DESLIZAR) — IGUAL INSTAGRAM
+    ===================================== */
+    let startX = 0;
+    let isDragging = false;
+    let diffX = 0;
+
+    function startDrag(x) {
+      startX = x;
+      isDragging = true;
+      stopAuto(); // pausa autoplay enquanto arrasta
+    }
+
+    function moveDrag(x) {
+      if (!isDragging) return;
+      diffX = x - startX;
+
+      // acompanha o dedo (arraste suave)
+      slidesWrapper.style.transition = "none";
+      slidesWrapper.style.transform =
+        `translateX(calc(-${index * 100}% + ${diffX}px))`;
+    }
+
+    function endDrag() {
+      if (!isDragging) return;
+      isDragging = false;
+
+      slidesWrapper.style.transition = "transform 0.45s ease";
+
+      // sensibilidade (mínimo para trocar o slide)
+      const threshold = 50;
+
+      if (diffX > threshold) {
+        prev(); // deslizou para a direita → volta slide
+      } else if (diffX < -threshold) {
+        next(); // deslizou para a esquerda → avança slide
+      } else {
+        // volta para a posição original caso não tenha sido forte o bastante
+        show(index);
+      }
+
+      diffX = 0;
+      startAuto(); // retoma autoplay
+    }
+
+    // TOUCH (celular)
+    slidesWrapper.addEventListener("touchstart", e => {
+      startDrag(e.touches[0].clientX);
+    });
+
+    slidesWrapper.addEventListener("touchmove", e => {
+      moveDrag(e.touches[0].clientX);
+    });
+
+    slidesWrapper.addEventListener("touchend", endDrag);
+
+    // MOUSE (desktop)
+    slidesWrapper.addEventListener("mousedown", e => {
+      startDrag(e.clientX);
+    });
+
+    slidesWrapper.addEventListener("mousemove", e => {
+      if (isDragging) moveDrag(e.clientX);
+    });
+
+    slidesWrapper.addEventListener("mouseup", endDrag);
+    slidesWrapper.addEventListener("mouseleave", () => {
+      if (isDragging) endDrag();
+    });
+
     return { show, next, prev, startAuto, stopAuto };
   }
 

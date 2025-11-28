@@ -359,3 +359,13 @@ body {
     padding-right: 20px;
   }
 }
+
+/* ===============================
+   REMOVER SETAS DO CARROSSEL NO MOBILE
+   =============================== */
+@media (max-width: 620px) {
+  .nav.left,
+  .nav.right {
+    display: none !important;
+  }
+}
