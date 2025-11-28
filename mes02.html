@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mês 0.2 - Faísca & Gota</title>
+  <link rel="stylesheet" href="assets/css/mes02.css">
+</head>
+<body>
+
+  <!-- Fundo animado -->
+  <div class="particles-container"></div>
+
+  <!-- Música -->
+  <audio id="musica" autoplay loop>
+    <source src="assets/musicas/musica02.mp3" type="audio/mp3">
+  </audio>
+
+  <button id="music-btn" aria-label="Tocar / pausar música">
+    <span id="icon" aria-hidden="true"></span>
+  </button>
+
+  <div class="container">
+
+    <button class="voltar" onclick="window.location.href='index.html'">Página Principal</button>
+
+    <!-- navegação entre meses -->
+    <button class="arrow-nav left" id="prevMes">❮</button>
+    <button class="arrow-nav right" id="nextMes">❯</button>
+
+    <h1 class="titulo">Faísca & Gota 💧🔥</h1>
+
+    <p id="typed-text" class="mensagem"></p>
+
+    <div class="carousel">
+      <div class="slides">
+        <img src="assets/imagens/mes02/01.jpg" class="slide">
+        <img src="assets/imagens/mes02/02.jpg" class="slide">
+        <img src="assets/imagens/mes02/03.jpg" class="slide">
+        <img src="assets/imagens/mes02/04.jpg" class="slide">
+        <img src="assets/imagens/mes02/05.jpg" class="slide">
+        <img src="assets/imagens/mes02/06.jpg" class="slide">
+      </div>
+
+      <button class="nav left" id="prev">❮</button>
+      <button class="nav right" id="next">❯</button>
+    </div>
+
+  </div>
+
+  <!-- ORDEM CORRETA -->
+  <script src="assets/js/unlock.js"></script>
+  <script src="assets/js/script.js"></script>
+  <script src="assets/js/mes02.js"></script>
+
+</body>
+</html>

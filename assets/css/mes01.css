@@ -64,6 +64,7 @@ h1 {
   height: 100%;
   z-index: 1;
 }
+
 /* ===== CARROSSEL ===== */
 .carrossel {
   position: relative;
@@ -145,5 +146,49 @@ h1 {
   position: fixed;
   top: 0;
   left: 0;
-  pointer-events: none; /* impede que o canvas bloqueie o scroll ou clique */
+  pointer-events: none;
+}
+
+/* ===========================================================
+          SETAS DE NAVEGAÇÃO ENTRE MESES (VERDE)
+=========================================================== */
+
+.arrow-nav {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2.6rem;
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(135deg, #00ff99, #39ffb8);
+  box-shadow: 0 0 12px rgba(0,255,150,0.55);
+  backdrop-filter: blur(6px);
+
+  transition: transform .25s ease, box-shadow .25s ease;
+  z-index: 30;
+}
+
+.arrow-nav.left { left: 20px; }
+.arrow-nav.right { right: 20px; }
+
+.arrow-nav:hover {
+  transform: translateY(-50%) scale(1.15);
+  box-shadow: 0 0 20px rgba(0,255,160,0.8);
+}
+
+@media (max-width: 620px) {
+  .arrow-nav {
+    width: 50px;
+    height: 50px;
+    font-size: 2.2rem;
+  }
 }
