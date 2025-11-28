@@ -1,7 +1,7 @@
 // CONFIGURAÇÃO DOS MESES LIBERADOS – você controla por aqui:
 const releaseDates = {
-  1: "2025-10-02",
-  2: "2025-11-02",
+  1: "2025-11-02",
+  2: "2025-12-02",
   3: "2026-01-02",
   4: "2026-02-02",
   5: "2026-03-02",

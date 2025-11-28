@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   ---------------------------------------------- */
 
   const monthButtons = document.querySelectorAll('.grid button');
-  const dataInicio = new Date(2025, 8, 2); // 02/09/2025
+  const dataInicio = new Date(2025, 9, 2); // 02/10/2025, 9 equivale ao mes 10
   const mensagemBloqueado = "Ainda não é o momento! Espere até o nosso mêsversário 🥰";
 
   const modal = document.getElementById('modal');
