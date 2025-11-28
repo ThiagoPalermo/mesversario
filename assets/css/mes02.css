@@ -358,10 +358,10 @@ body {
   }
 
   .nav.left {
-    left: 14px !important;   /* antes era 4px */
+    left: 20px !important;   /* antes era 4px */
   }
 
   .nav.right {
-    right: 14px !important;  /* antes era 4px */
+    right: 20px !important;  /* antes era 4px */
   }
 }
