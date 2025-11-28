@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nosso Primeiro Mês 💚</title>
+
+  <link rel="stylesheet" href="assets/css/mes01.css">
+</head>
+<body>
+
+  <div class="background">
+    <canvas id="heartCanvas"></canvas>
+  </div>
+
+  <main class="conteudo">
+    <h1>Feliz 0.1 Mês, Meu Amor 💚</h1>
+
+    <button class="btn-musica" id="btnMusica">⏸ Pausar Música</button>
+
+    <!-- Carrossel -->
+    <div class="carrossel">
+      <span class="seta prev">❮</span>
+
+      <img src="assets/imagens/mes01/01.jpg" class="slide ativo">
+      <img src="assets/imagens/mes01/02.jpg" class="slide">
+      <img src="assets/imagens/mes01/03.jpg" class="slide">
+      <img src="assets/imagens/mes01/04.jpg" class="slide">
+      <img src="assets/imagens/mes01/05.jpg" class="slide">
+      <img src="assets/imagens/mes01/06.jpg" class="slide">
+      <img src="assets/imagens/mes01/07.jpg" class="slide">
+      <img src="assets/imagens/mes01/08.jpg" class="slide">
+
+      <span class="seta next">❯</span>
+    </div>
+
+    <p id="textoDigitado"></p>
+
+    <button class="voltar" onclick="window.location.href='index.html'">Página Principal</button>
+
+    <!-- navegação entre meses -->
+    <button class="arrow-nav left" id="prevMes">❮</button>
+    <button class="arrow-nav right" id="nextMes">❯</button>
+    
+  </main>
+
+  <audio id="musica" autoplay loop>
+    <source src="assets/musicas/musica01.mp3" type="audio/mp3">
+  </audio>
+
+  <!-- ORDEM CORRETA -->
+  <script src="assets/js/unlock.js"></script>
+  <script src="assets/js/script.js"></script>
+  <script src="assets/js/mes01.js"></script>
+
+</body>
+</html>

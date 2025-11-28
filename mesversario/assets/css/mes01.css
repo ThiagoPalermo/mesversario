@@ -1,0 +1,194 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: #111;
+  color: white;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.conteudo {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 800px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding-top: 60px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.foto {
+  width: 260px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255,255,255,0.3);
+  margin-bottom: 20px;
+}
+
+#texto-romantico {
+  font-size: 1.2rem;
+  width: 80%;
+  margin: 0 auto 30px;
+  line-height: 1.6;
+  opacity: 0;
+  animation: aparecer 3s forwards 1s;
+}
+
+@keyframes aparecer {
+  to { opacity: 1; }
+}
+
+.voltar {
+  padding: 10px 20px;
+  border: none;
+  background: #00ff99;
+  color: #000;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.voltar:hover {
+  transform: scale(1.05);
+}
+
+/* corações animados */
+#heartCanvas {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* ===== CARROSSEL ===== */
+.carrossel {
+  position: relative;
+  width: 280px;
+  margin: 0 auto 25px;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 0 18px rgba(255,255,255,0.2);
+}
+
+.slide {
+  width: 100%;
+  display: none;
+  animation: fade 0.8s ease;
+}
+
+.slide.ativo {
+  display: block;
+}
+
+@keyframes fade {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+.seta {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+  background: #00ff9998;
+  padding: 6px 10px;
+  border-radius: 8px;
+  user-select: none;
+  transition: .3s;
+}
+
+.seta:hover {
+  background: rgba(0,0,0,0.45);
+}
+
+.prev { left: 5px; }
+.next { right: 5px; }
+
+/* ===== TEXTO DIGITADO ===== */
+#textoDigitado {
+  font-size: 1.2rem;
+  width: 80%;
+  margin: 0 auto 30px;
+  line-height: 1.6;
+  background: rgba(255,255,255,0.25);
+  border-radius: 12px;
+  padding: 14px;
+  backdrop-filter: blur(4px);
+  box-shadow: 0 0 12px rgba(255,255,255,0.1);
+  min-height: 120px;
+}
+
+.btn-musica{
+  background: var(--verde);
+  border: none;
+  color: var(--texto);
+  font-weight: 700;
+  padding: 8px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 18px;
+  transition: 0.3s;
+}
+
+.btn-musica:hover{
+  transform: scale(1.05);
+  background: #7ef2b0;
+}
+
+#heartCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+/* ===========================================================
+          SETAS DE NAVEGAÇÃO ENTRE MESES (VERDE)
+=========================================================== */
+
+.arrow-nav {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2.6rem;
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(135deg, #00ff99, #39ffb8);
+  box-shadow: 0 0 12px rgba(0,255,150,0.55);
+  backdrop-filter: blur(6px);
+
+  transition: transform .25s ease, box-shadow .25s ease;
+  z-index: 30;
+}
+
+.arrow-nav.left { left: 20px; }
+.arrow-nav.right { right: 20px; }
+
+.arrow-nav:hover {
+  transform: translateY(-50%) scale(1.15);
+  box-shadow: 0 0 20px rgba(0,255,160,0.8);
+}
+
+@media (max-width: 620px) {
+  .arrow-nav {
+    width: 50px;
+    height: 50px;
+    font-size: 2.2rem;
+  }
+}

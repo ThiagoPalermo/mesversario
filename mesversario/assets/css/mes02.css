@@ -1,0 +1,303 @@
+/* ------- TEMA FAÍSCA & GOTA ------- */
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(180deg, #78c7f2 0%, #b8ecff 50%, #ff9e6b 100%);
+  overflow-x: hidden;
+  color: #0a2a45;
+}
+
+/* Fundo animado */
+.particles-container {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: -1;
+}
+
+/* Container */
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.titulo {
+  font-size: 2.4rem;
+  text-shadow: 0 0 14px rgba(255,255,255,0.6);
+  margin-bottom: 25px;
+}
+
+/* Botão voltar */
+.voltar {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  padding: 8px 16px;
+  border: none;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 12px;
+  cursor: pointer;
+
+  background: linear-gradient(135deg, #3ac8ff, #ff8a5d, #3ac8ff);
+  background-size: 300% 300%;
+  animation: gradientFlow 6s ease infinite;
+  box-shadow: 0 0 12px rgba(58,200,255,0.7);
+  animation: gradientFlow 6s ease infinite, glowPulse 4s ease-in-out infinite;
+
+  backdrop-filter: blur(5px);
+  transition: transform .2s ease;
+}
+
+.voltar:hover {
+  transform: scale(1.09);
+}
+
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes glowPulse {
+  0% {   box-shadow: 0 0 12px rgba(58,200,255,0.6); }
+  25% {  box-shadow: 0 0 16px rgba(255,138,93,0.8); }
+  50% {  box-shadow: 0 0 18px rgba(58,200,255,1); }
+  75% {  box-shadow: 0 0 20px rgba(255,138,93,1); }
+  100% { box-shadow: 0 0 12px rgba(58,200,255,0.6); }
+}
+
+/* Música */
+#music-btn {
+  position: fixed;
+  top: 18px;
+  right: 18px;
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 50%;
+  background: #ff6b3d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0,0,0,0.25);
+  z-index: 40;
+  transition: transform 0.2s ease;
+}
+
+#icon {
+  position: relative;
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#icon::before {
+ content: "♪";
+  font-size: 28px;
+  color: white;
+  position: absolute;
+  z-index: 1;
+  font-weight: bold;
+}
+
+#icon.muted::before {
+  color: rgba(255,255,255,0.35);
+}
+
+#icon.muted::after {
+  content: "";
+  position: absolute;
+  width: 32px;
+  height: 4px;
+  background: white;
+  border-radius: 3px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-35deg);
+  z-index: 3;
+}
+
+#music-btn:hover {
+  transform: scale(1.08);
+}
+
+/* Texto digitado */
+.mensagem {
+  font-size: 1.2rem;
+  white-space: pre-line;
+  padding: 22px 24px;
+  margin: 0 auto;
+  width: 85%;
+  max-width: 650px;
+  background: linear-gradient(135deg, #ff8a5d, #3ac8ff, #ff8a5d);
+  border-radius: 20px;
+  color: white;
+  text-shadow: 0 0 10px rgba(0,0,0,0.7);
+  box-shadow: 0 0 12px rgba(0,0,0,0.25);
+}
+
+/* carrossel */
+.carousel {
+  position: relative;
+  width: 55%;
+  max-width: 600px;
+  margin: 35px auto 0 auto;
+  overflow: hidden;
+  border-radius: 18px;
+  min-height: 200px;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.6s ease;
+}
+
+.slides .slide {
+  width: 100%;
+  height: auto;
+  max-height: 430px;
+  object-fit: contain;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.05);
+}
+
+/* Navegação */
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  padding: 12px;
+  font-size: 2rem;
+  cursor: pointer;
+  border-radius: 50%;
+  backdrop-filter: blur(6px);
+}
+
+/* SETA ESQUERDA — GOTA */
+.nav.left {
+  background: linear-gradient(135deg, #5ec9ffcc, #ffffff60);
+  color: #d9f4ff;
+  border: 2px solid rgba(94,201,255,0.6);
+  text-shadow: 0 0 10px rgba(94,201,255,1);
+  transition: .25s ease;
+}
+
+.nav.left:hover {
+  background: linear-gradient(135deg, #33b8ff, #aee8ff);
+  transform: scale(1.22);
+}
+
+/* SETA DIREITA — FAÍSCA */
+.nav.right {
+  background: linear-gradient(135deg, #ff8a5dcc, #ffffff60);
+  color: #ffe7dd;
+  border: 2px solid rgba(255,138,93,0.6);
+  text-shadow: 0 0 10px rgba(255,138,93,1);
+  transition: .25s ease;
+}
+
+.nav.right:hover {
+  background: linear-gradient(135deg, #ff6b3d, #ffd4c7);
+  transform: scale(1.22);
+}
+
+/* SETAS PADRÃO DO CARROSSEL */
+.left { left: 10px; }
+.right { right: 10px; }
+
+@media(max-width: 600px) {
+  .titulo { font-size: 2rem; }
+  .mensagem { font-size: 1.05rem; }
+  .nav { font-size: 1.6rem; padding: 8px; }
+}
+
+/* Partículas */
+.particle {
+  position: absolute;
+  top: -10px;
+  width: 10px;
+  height: 14px;
+  border-radius: 50%;
+  animation: fall linear forwards;
+}
+
+.fire {
+  background: #ff6b3d;
+  box-shadow: 0 0 8px #ff6b3d;
+}
+
+.water {
+  background: #72d4ff;
+  box-shadow: 0 0 8px #72d4ff;
+}
+
+@keyframes fall {
+  to { transform: translateY(110vh) scale(0.8); }
+}
+
+/* ===========================================================
+       SETAS LATERAIS DE NAVEGAÇÃO ENTRE MESES
+=========================================================== */
+
+.arrow-nav {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2.8rem;
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: .25s ease-in-out;
+  z-index: 50;
+  backdrop-filter: blur(6px);
+}
+
+/* GOTA (ESQUERDA) */
+.arrow-nav.left {
+  left: 18px;
+  background: linear-gradient(140deg, #3ac8ff, #80ddff);
+  color: white;
+  box-shadow: 0 0 20px rgba(58,200,255,0.7);
+}
+
+.arrow-nav.left:hover {
+  transform: translateY(-50%) scale(1.15);
+  box-shadow: 0 0 26px rgba(58,200,255,1);
+}
+
+/* FAÍSCA (DIREITA) */
+.arrow-nav.right {
+  right: 18px;
+  background: linear-gradient(140deg, #ff8a5d, #ffc0a3);
+  color: white;
+  box-shadow: 0 0 20px rgba(255,138,93,0.7);
+}
+
+.arrow-nav.right:hover {
+  transform: translateY(-50%) scale(1.15);
+  box-shadow: 0 0 26px rgba(255,138,93,1);
+}
+
+@media (max-width: 620px) {
+  .arrow-nav {
+    width: 54px;
+    height: 54px;
+    font-size: 2.3rem;
+  }
+}
