@@ -303,7 +303,7 @@ body {
 }
 
 /* =====================================================
-   CARROSSEL NO MOBILE — SETAS AO LADO DO CARROSSEL
+   CARROSSEL NO MOBILE — SETAS MAIS BAIXAS E AO LADO
    ===================================================== */
 @media (max-width: 480px) {
 
@@ -326,10 +326,13 @@ body {
      ========================== */
   .nav {
     position: absolute !important;
-    top: 50%;
+
+    /* ↓↓↓ MOVIDO PARA BAIXO (de 50% para 65%) ↓↓↓ */
+    top: 65%;
+
     transform: translateY(-50%);
-    padding: 6px 8px;
-    font-size: 1.5rem;
+    padding: 7px 9px;
+    font-size: 1.55rem;
     border-radius: 50%;
     background: rgba(255,255,255,0.45);
     backdrop-filter: blur(4px);
@@ -347,12 +350,10 @@ body {
     right: -22px !important;
   }
 
-  /* hover menor no mobile */
   .nav:hover {
     transform: translateY(-50%) scale(1.08);
   }
 
-  /* dar espaço extra ao texto */
   .mensagem {
     padding-left: 20px;
     padding-right: 20px;
