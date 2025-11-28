@@ -339,29 +339,23 @@ body {
    ===================================================== */
 @media (max-width: 480px) {
 
-  /* aumenta a largura do carrossel */
-  .carousel {
-    width: 90% !important;
-    max-width: 95%;
-    border-radius: 16px;
-  }
-
-  /* imagens mais altas e ocupando mais espaço */
-  .slides .slide {
-    max-height: 380px !important;
-  }
-
-  /* setas menores e mais afastadas */
-  .nav {
-    transform: scale(0.8);  /* um pouquinho maior que antes */
-    padding: 10px;
-  }
-
+  /* empurra as setas para fora do carrossel */
   .nav.left {
-    left: 20px !important;   /* antes era 4px */
+    left: -32px !important;     /* deixa fora da imagem */
+    transform: translateY(-50%) scale(0.75);
   }
 
   .nav.right {
-    right: 20px !important;  /* antes era 4px */
+    right: -32px !important;    /* deixa fora da imagem */
+    transform: translateY(-50%) scale(0.75);
+  }
+
+  /* aumenta levemente o carrossel para dar mais espaço */
+  .carousel {
+    width: 94% !important;
+  }
+
+  .slides .slide {
+    max-height: 360px !important;
   }
 }
