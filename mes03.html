@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mês 0.3 </title>
+
+  <link rel="stylesheet" href="assets/css/mes03.css">
+</head>
+<body>
+
+  <!-- Música -->
+<audio id="musica" autoplay loop>
+  <source src="assets/musicas/musica03.mp3" type="audio/mp3">
+</audio>
+
+<button id="music-btn" aria-label="Tocar / pausar música">
+  <span id="icon" aria-hidden="true"></span>
+</button>
+
+  <!-- NAV -->
+  <button class="voltar" onclick="window.location.href='index.html'">Página Principal</button>
+  <button class="arrow-nav left" id="prevMes">❮</button>
+  <button class="arrow-nav right" id="nextMes">❯</button>
+
+  <!-- 🎡 PARQUE -->
+  <section class="scene parque">
+  <div class="parque-text">
+  <h1>Primeiros passeios, primeiras memórias</h1>
+  <p id="parqueTyping"></p>
+</div>
+  <div class="ferris-wheel">
+  <div class="wheel-spin">
+    <span class="cabin" style="--i:0"></span>
+    <span class="cabin" style="--i:1"></span>
+    <span class="cabin" style="--i:2"></span>
+    <span class="cabin" style="--i:3"></span>
+    <span class="cabin" style="--i:4"></span>
+    <span class="cabin" style="--i:5"></span>
+    <span class="cabin" style="--i:6"></span>
+    <span class="cabin" style="--i:7"></span>
+  </div>
+</div>
+</section>
+
+  <!-- ❄️ NATAL -->
+   <section class="scene natal">
+  <div class="natal-text">
+  <p id="natalTyping"></p>
+</div>
+  <div class="tree">
+    <div class="tree-star">★</div>
+    <span class="ornament" style="top:30px; left:-18px; color:#e74c3c"></span>
+    <span class="ornament" style="top:38px; left:0px; color:#f1c40f"></span>
+    <span class="ornament" style="top:45px; left:16px; color:#3498db"></span>
+
+    <span class="ornament" style="top:55px; left:-26px; color:#9b59b6"></span>
+    <span class="ornament" style="top:60px; left:-6px; color:#1abc9c"></span>
+    <span class="ornament" style="top:65px; left:14px; color:#e67e22"></span>
+
+    <span class="ornament" style="top:75px; left:-18px; color:#f39c12"></span>
+    <span class="ornament" style="top:80px; left:4px; color:#ecf0f1"></span>
+  </div>
+
+  <div class="gifts">
+    <div class="gift red"></div>
+    <div class="gift blue"></div>
+    <div class="gift green"></div>
+  </div>
+  <div class="snow-ground"></div>
+</section>
+   
+
+  <!-- 🎆 ANO NOVO -->
+  <section class="scene ano-novo">
+     <div class="ano-novo-container">
+
+    <h2 class="ano-novo-titulo">✨ Feliz Ano Novo amor, espero poder continuar a escrever muitos momentos com você ✨</h2>
+
+    <div class="carousel ano-novo-carousel">
+      <div class="slides">
+        <img src="assets/imagens/mes03/01.jpg" class="slide">
+        <img src="assets/imagens/mes03/02.jpg" class="slide">
+        <img src="assets/imagens/mes03/03.jpg" class="slide">
+        <img src="assets/imagens/mes03/04.jpg" class="slide">
+        <img src="assets/imagens/mes03/05.jpg" class="slide">
+        <img src="assets/imagens/mes03/06.jpg" class="slide">
+        <img src="assets/imagens/mes03/07.jpg" class="slide">
+        <img src="assets/imagens/mes03/08.jpg" class="slide">
+        <img src="assets/imagens/mes03/09.jpg" class="slide">
+        <img src="assets/imagens/mes03/10.jpg" class="slide">
+      </div>
+
+      <button class="nav left" id="prev">❮</button>
+      <button class="nav right" id="next">❯</button>
+    </div>
+
+  </div>
+    <canvas id="fireworks"></canvas>
+  </section>
+
+  <script src="assets/js/unlock.js"></script>
+  <script src="assets/js/mes03.js"></script>
+</body>
+</html>
