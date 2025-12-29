@@ -582,17 +582,25 @@ body {
     padding-top: 10vh; 
   }
 
-  .natal-text {
+ .natal-text {
     position: static;
     width: 90%;
-    max-width: 320px;
-    margin-bottom: 40px; /* Espaço entre o texto e a árvore */
+    max-width: 340px;
+    
+    /* 🚀 O TRUQUE: margin-bottom auto empurra o texto para cima 
+       até onde houver espaço, centralizando-o melhor na vertical */
+    margin-top: auto;
+    margin-bottom: auto; 
     
     text-align: center;
     background: rgba(10, 61, 98, 0.9);
-    padding: 16px;
+    padding: 18px;
     border-radius: 16px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    
+    /* Reset de herança */
+    right: auto;
+    left: auto;
   }
 
   /* Centralização da Árvore */
