@@ -122,3 +122,36 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 });
+
+/* ----------------------------------------------
+   PLAYER DE MÚSICA
+---------------------------------------------- */
+
+const musica = document.getElementById("musica");
+const btnMusica = document.getElementById("music-btn");
+const icon = document.getElementById("icon");
+
+if (musica && btnMusica && icon) {
+
+  function syncIcon(){
+    if (musica.paused) {
+      icon.classList.add("muted");
+    } else {
+      icon.classList.remove("muted");
+    }
+  }
+
+  btnMusica.addEventListener("click", () => {
+    if (musica.paused) {
+      musica.play().catch(() => {});
+    } else {
+      musica.pause();
+    }
+    syncIcon();
+  });
+
+  musica.addEventListener("play", syncIcon);
+  musica.addEventListener("pause", syncIcon);
+
+  syncIcon();
+}

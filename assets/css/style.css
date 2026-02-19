@@ -282,3 +282,35 @@ body{
   60% { transform: scale(1.05); opacity: 1; }
   100% { transform: scale(1); }
 }
+
+/* ==========================
+   PLAYER DE MÚSICA
+========================== */
+.music-btn{
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+
+  font-size: 22px;
+  color: white;
+
+  background: linear-gradient(135deg, #60c48c, #a26df4);
+  box-shadow: 0 0 18px rgba(96,196,140,.6);
+
+  transition: transform .2s ease, box-shadow .3s ease;
+}
+
+.music-btn:hover{
+  transform: scale(1.08);
+}
+
+#icon.muted{
+  opacity: 0.5;
+}
